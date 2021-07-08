@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	   
+<head>
+    <title>Profile image</title>
+</head>
+
+
+<body>
+	
+    <form method="POST" action="/profile-upload-single" enctype="multipart/form-data">
+		
+		<div>
+            <p>
+              <label>User name</label>
+              <input id="username_for"  name="username_for_profile"/>
+            </p>
+</div>
+		
+        <div>
+            <label>Upload profile picture</label>
+            <input type="file" name="profile-file" id="profile_file" required/>
+        </div>
+		<h4 style="color: red"><strong>Note: The image must be in JPG format only.</strong></h4>
+        <div>
+            <input type="submit" value="Upload" />
+        </div>
+
+    </form>
+	
+	<script>
+		var profile_image=sessionStorage.getItem("User-name");	
+		document.getElementById("username_for").value=profile_image;
+		</script>
+    
+
+</body>
+
+</html>

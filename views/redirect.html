@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+   <body>
+	   <p id="demo"></p>
+      <script>
+		
+		
+		 var redirectroom= sessionStorage.getItem("redirectto") || "/"
+		
+		 sessionStorage.clear();
+//		  setTimeout(function(){ 
+//            window.location.href = redirectroom;
+//         }, 2000);
+//		  
+		  
+		 	window.location.href = redirectroom;
+
+      </script>
+
+      <p>Web page redirects after 2 seconds.</p>
+   </body>
+</html>

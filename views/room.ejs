@@ -1,0 +1,286 @@
+<div class="header">
+      <div class="logo">
+        <div class="header__back">
+          <i class="fas fa-angle-left"></i>
+        </div>
+<!--        <h3>Video Chat</h2>-->
+		  <img src="\images\Capture.png" class="logofortop">
+      </div>
+    </div>  
+
+
+<div class="main-wrapper">
+    <div id="video-grid"></div>
+  </div>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-elements-wrapper">
+        <button id="share-toggle" class="footer-elements tooltip" tool_tip="Share Meeting link">
+          <ion-icon name="share-social"></ion-icon>
+        </button>
+        <button id="video-toggle" class="footer-elements tooltip" tool_tip="Video toggle">
+          <ion-icon name="videocam-outline"></ion-icon>
+        </button>
+        <button id="mic-toggle" class="footer-elements tooltip" tool_tip="Microphone toggle">
+          <ion-icon name="mic-outline"></ion-icon>
+        </button>
+        
+         
+         <button id="cams-toggle" class="footer-elements tooltip" tool_tip="Change the camera">
+          <ion-icon name="sync-outline"></ion-icon>
+        </button>  
+       
+        <button id="share-screen" class="footer-elements tooltip" tool_tip="Share Screen">
+          <ion-icon name="tv-outline"></ion-icon>
+        </button>
+        <button id="message-box" class="footer-elements tooltip" tool_tip="Messages" >
+          <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+        </button>
+
+      
+		<button id="recording-toggle" class="footer-elements tooltip" tool_tip="Start Recording" onclick="myFunction()">
+          <ion-icon name="recording-outline"></ion-icon>
+          </ion-icon>
+        </button>
+		  <button id="meeting-toggle" class="footer-elements call-button tooltip" tool_tip="Join the Meeting">
+          <ion-icon name="call-outline" hidden></ion-icon>
+        </button>
+      </button>
+      
+	
+      
+	  
+	  
+	  
+	  
+	  </div>
+<!--
+      <div class="options-wrapper" style="visibility: hidden;">
+        <button class="footer-elements" >
+          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+        </button>
+      </div>
+-->
+    </div>
+  </footer>
+  <div class="tool-bar-wrapper" id:"formobiletime">
+    <button id="peoples-count" class="tool-bar-button" >
+      <ion-icon name="people-outline"></ion-icon>
+      <span class="user-number" id="user-number">
+        <%= count %>
+      </span>
+    
+    <button id="time" class="tool-bar-button">
+      00:00 AM
+    </button>
+  </div>
+  <div class="dialogue-container">
+    <div class="dialogue-head">
+      <p class="dialogue-title">Your meeting's ready</p>
+      <button id="close-dialogue" class="dialogue-button">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="dialogue-body">
+      <p>Share this meeting link with others you want in the meeting</p>
+      <div class="share-container">
+        <p class="share-link">meet.google.com/sij-dwa-zjm</p>
+        <button id="copy-button" class="dialogue-button tooltip" tool_tip="copy"
+          meeting_link="meet.google.com/sij-dwa-zjm">
+          <ion-icon name="copy-outline"></ion-icon>
+        </button>
+      </div>
+		
+		
+		
+<!--
+		<form class="share-mail-wrapper">
+        <div class="mail-input-box-wrapper">
+          <input type="text" class="mail-input" id="mail-input" placeholder="Enter email">
+        </div>
+        <button type="send" class="mail-input-button" onclick="send_email()">
+          <ion-icon name="send-outline"></ion-icon>
+        </button>
+      </form>
+		
+-->
+		
+		
+<!--		<form method="post"><input type="button" value="Send Email" onclick="sendEmail()" /></form>-->
+		
+		<br>
+		<div id="mail-input-container">
+		<form method="post" class="mailform"><input type="text" class="mail-input" id="mail-input" placeholder="Enter email" style="height=20%"><input type="button" value="Send Email" onclick="sendEmail()" class="buttonformail"/></form>
+		</div>
+		
+		
+		
+		
+		
+      <p class="caption">Joined as <%= user.name %>
+      </p>
+    </div>
+  </div>
+  <div id="chat-panel" class="chat-box-wrapper">
+    <div class="chat-box-header">
+      <div class="chat-box-headline">
+        <ion-icon name="chatbox-outline"></ion-icon>
+        <span>Chat</span>
+      </div>
+      <button id="chat-close-button" class="cross-button">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+    </div>
+    <div class="chat-box">
+  
+    </div>
+    <div class="chat-box-control">
+      <form class="chat-input-wrapper">
+        <div class="input-box-wrapper" chat-id="asdf">
+          <input type="text" class="chat-input" id="chat-input" placeholder="Send Message">
+        </div>
+        <button type="submit" class="chat-input-button">
+          <ion-icon name="send-outline"></ion-icon>
+        </button>
+      </form>
+    </div>
+  </div>
+  <script>
+  
+  
+  </script>
+  <script>
+    const messageBoxButton = document.getElementById('message-box')
+    const chatCloseButton = document.getElementById('chat-close-button')
+    chatCloseButton.addEventListener('click', e => {
+  
+      const chatPanel = document.getElementById('chat-panel')
+      const toolBarWrapper = document.querySelector('.tool-bar-wrapper')
+      toolBarWrapper.classList.toggle('hide-tool-bar')
+      chatPanel.classList.toggle('display-chat-panel')
+    })
+    messageBoxButton.addEventListener('click', e => {
+      if (e.target.classList.contains('dot'))
+        e.target.classList.remove('dot')
+      const chatPanel = document.getElementById('chat-panel')
+      const toolBarWrapper = document.querySelector('.tool-bar-wrapper')
+      toolBarWrapper.classList.toggle('hide-tool-bar')
+      chatPanel.classList.toggle('display-chat-panel')
+    })
+  </script>
+	  
+	  
+	  
+	  
+	  <script>
+function myFunction() {
+//  window.open("/recorder");
+	window.open("/recorder", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=500,width=600,height=500");
+}
+</script>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+  <script>
+    const setTime = () => {
+      const timeButton = document.getElementById('time')
+      var time = new Date();
+      timeButton.innerHTML = `${time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`
+    }
+    setTime()
+    setInterval(() => {
+      setTime()
+    }, 500);
+    const shareToggleButton = document.getElementById('share-toggle')
+    shareToggleButton.addEventListener('click', e => {
+      const dialogue = document.querySelector('.dialogue-container')
+      dialogue.classList.toggle('dialogue-active')
+    })
+    const copyButton = document.querySelector('#copy-button')
+    const shareLink = document.querySelector('.share-link')
+    shareLink.innerHTML = window.location.href
+//	  console.log(windows.location.href);
+    copyButton.setAttribute('meeting_link', window.location.href)
+    const dialogueCloseButton = document.querySelector('#close-dialogue')
+    dialogueCloseButton.addEventListener('click', (e) => {
+      const dialogue = document.querySelector('.dialogue-container')
+      dialogue.classList.toggle('dialogue-active')
+    })
+    copyButton.addEventListener("mousedown", (e) => {
+      const copyText = e.target.getAttribute('meeting_link')
+      navigator.clipboard.writeText(copyText);
+      e.target.setAttribute("tool_tip", 'copied');
+    });
+    copyButton.addEventListener("mouseout", (e) => {
+      e.target.setAttribute("tool_tip", 'copy');
+    });
+  </script>
+  <!--   Change camera  -->
+   <script>
+    const cameraBtn = document.querySelector('#cams-toggle')
+    cam = {}
+    function gotDevices(mediaDevices) {
+      let count = true;
+      mediaDevices.forEach((mediaDevice) => {
+        if (mediaDevice.kind === "videoinput") {
+          cam[mediaDevice.deviceId] = count;
+          count = false;
+        }
+      });
+      cameraBtn.setAttribute('camera', JSON.stringify(cam))
+    }
+    navigator.mediaDevices.enumerateDevices().then(gotDevices);
+  </script>
+	  
+	  
+	  
+	  
+
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+	  
+	  
+<script>
+function sendEmail(){
+//Email.send({
+//  Host : "smtp.gmail.com",
+//  Username : "rahulsapnagoel@gmail.com",
+//  Password : "Rahul.Mehul",
+//  To : 'rahulgoelb@gmail.com',
+//  From : "rahulsapnagoel@gmail.com",
+//  Subject : "This is the subject",
+//  Body : "And this is the body"
+//}).then(
+//message => alert(message)
+//);
+//	
+	var EmailPanel = document.getElementById('mail-input');
+	
+	
+	Email.send({
+    SecureToken : "abc19df9-1f0f-4618-a167-fddd336dd70d",
+    To : EmailPanel.value,
+    From : "rahulsapnagoel@gmail.com",
+    Subject : "This is the subject",
+    Body : window.location.href,
+}).then(
+  message => alert("mail has been sent sucessfully to "+EmailPanel.value)
+);}
+//}
+//	function mail(){
+//const emailInput = document.getElementById("mail-input");
+////	  var email= emailInput.value;
+//var email = "someone@microsoft.com";
+//document.write("<a href="mailto:'+email+'">'+email+'</a>");
+//	} 
+</script>
+   

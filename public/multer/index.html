@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Profile form</title>
+</head>
+
+
+<body>
+    <form method="POST" action="/profile-upload-single" enctype="multipart/form-data">
+		
+		<div>
+            <label>User name</label>
+            <input id="username_for"  name="username_for_profile"/>
+        </div>
+		
+        <div>
+            <label>Upload profile picture</label>
+            <input type="file" name="profile-file" required/>
+        </div>
+        <div>
+            <input type="submit" value="Upload" />
+        </div>
+	
+    </form>
+
+    <hr>
+
+</body>
+
+</html>

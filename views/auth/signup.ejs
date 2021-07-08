@@ -1,0 +1,107 @@
+<div class="container py-5"
+    style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h3 class="text-center mb-3"   style="color: Black;" >Register To Meeting</h3>
+    <div class="card" style="width:100%; max-width: 25rem;  background: transparent; border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 7px 7px 7px 7px;">
+        <div style="display: flex; justify-content: space-between; align-items: center;" class="card-header">
+            <p class="m-0"><img src="\images\Capture.jpg"> </p>
+			<p class="myedit" style="margin:0;">
+            <a href="/login" type="button"   style="color: white;"  class="btn btn-outline-dark">login</a>
+			</p>
+        </div>
+        <div class="card-body">
+            <form action="/signup" method="POST">
+                <% if(locals.messages.success){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= locals.messages.success %>
+                    </div>
+                    <% } %>
+                        <% if(locals.messages.err){ %>
+                            <div class="alert alert-danger" role="alert">
+                                <%= locals.messages.err %>
+                            </div>
+                            <% } %>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Name</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <ion-icon name="person-outline"></ion-icon>
+                                            </div>
+                                            <input name="name" type="text" class="form-control"
+                                                id="autoSizingInputGroup" placeholder="Full Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Username</label>
+                                        <div class="input-group">
+                                            <div class="input-group-text">
+                                                <ion-icon name="person-circle-outline"></ion-icon>
+                                            </div>
+                                            <input name="username" type="text" class="form-control"
+                                                id="autoSizingInputGroup" placeholder="Username">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <ion-icon name="mail-outline"></ion-icon>
+                                        </div>
+                                        <input name="email" type="email" class="form-control" id="autoSizingInputGroup"
+                                            placeholder="Your Email" aria-describedby="emailHelp">
+                                    </div>
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <ion-icon name="lock-closed-outline"></ion-icon>
+                                        </div>
+                                        <input name="password" type="password" class="form-control"
+                                            id="autoSizingInputGroup" placeholder="Password">
+                                    </div>
+                                    <div id="passwordHelp" class="form-text">Don't give your password to anyone.
+                                </div>
+                                </div>
+                                <button style=" width: 100%; " type="submit" class="btn btn-dark">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>		
+/*
+    body {
+        background: #19153b;   fallback for old browsers 
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);   Chrome 10-25, Safari 5.1-6 
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    }
+*/		
+	body {
+/*        background: #0f0c29;   fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);   Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #24243e, #302b63, #0f0c29);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f4f4f4;
+  color: #5a5656;
+  display: grid;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  place-items: center;
+
+    }
+	
+	img{
+		height: 2.5rem;
+	}
+	
+	.myedit{
+		background-color: #5a5656;
+		border-radius: 5px 5px 5px 5px;
+	}
+</style>

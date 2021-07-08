@@ -1,0 +1,246 @@
+
+<script>
+var k=window.location.pathname;
+var	p=k.substring(6, k.length);
+sessionStorage.setItem("count",sessionStorage.getItem("count")+1 );
+if(sessionStorage.getItem("count")==1)
+	{
+	sessionStorage.setItem("redirectto", p);
+	}
+
+</script>
+
+<div class="container py-5"
+    style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h3 class="text-center mb-3" 
+    style= color: Black; >Welcome!!</h3>
+	
+	
+    <div class="card"
+     style="width:100%; max-width: 25rem;  background: transparent; border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 7px 7px 7px 7px;">
+        <div class="card-header"
+         style="display: flex; justify-content: space-between; align-items: center;" >
+            <p class="m-0 " ><img src="\images\Capture.jpg"> </p>
+			<p class="myedit" style="margin:0;">            
+			<a href="/signup"
+             type="button" 
+             style="color: white;"
+              class="btn btn-outline-dark">Sign Up</a>
+				</p>
+
+        </div>
+        <div class="card-body">
+            <form action="/login" method="POST">
+                <% if(locals.messages.success){ %>
+                    <div class="alert alert-success" role="alert">
+                        <%= locals.messages.success %>
+                    </div>
+                    <% } %>
+                        <% if(locals.messages.error){ %>
+                            <div class="alert alert-danger" role="alert">
+                                <%= locals.messages.error %>
+                            </div>
+                            <% } %>
+                                <div class="mb-3">
+                                    <label class="form-label">Username</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <ion-icon name="person-circle-outline"></ion-icon>
+                                        </div>
+                                        <input name="username" type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Password</label>
+                                    <div class="input-group">
+                                        <div class="input-group-text">
+                                            <ion-icon name="lock-closed-outline"></ion-icon>
+                                        </div>
+                                        <input name="password" type="password" class="form-control"
+                                            placeholder="Password">
+                                    </div>
+                                </div>
+                                <button style="width: 100%;" type="submit" class="btn btn-dark">Login</button>
+				
+				
+				
+<div style="display: block; justify-content: centre; align-items: center;align: middle">	
+	<p></p>
+				
+<!--				 <p class="orbut"><span class="btn-round">or</span></p>-->
+
+<!--  <p class="gmailbut">-->
+
+<!--    <a class="twitter-before"><span class="fontawesome-twitter" >-->
+<!--	<ion-icon name="mail" style="zoom:2.0;"></ion-icon>-->
+<!--		<ion-icon name="mail"></ion-icon>-->
+<!--		<ion-icon name="logo-googleplus"></ion-icon>-->
+<!--		  <ion-icon name="logo-google" style="zoom:1.2"></ion-icon>-->
+<!--		<img src="google.png" width="50" height="50">-->
+<!--		<img src="/images/google.jpg.png" height=50px class="rounded" alt="">-->
+<!--		</span></a>-->
+<!--    <button class="twitter">Google</button>-->
+
+<!--  </p>-->
+	
+<!--	 <p class="fbbut">-->
+
+<!--    <a class="fb-before"><span class="fontawesome-fb" >-->
+<!--	<ion-icon name="mail" style="zoom:2.0;"></ion-icon>-->
+<!--		<ion-icon name="mail"></ion-icon>-->
+<!--		<ion-icon name="logo-googleplus"></ion-icon>-->
+<!--		  <ion-icon name="logo-facebook" style="zoom:1.5"></ion-icon>-->
+<!--		<img src="google.png" width="50" height="50">-->
+<!--		<img src="/images/google.jpg.png" height=50px class="rounded" alt="">-->
+<!--		</span></a>-->
+<!--    <button class="fb">Facebook</button>-->
+
+<!--  </p>-->
+
+</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+/*        background: #0f0c29;   fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);   Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #24243e, #302b63, #0f0c29);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #f4f4f4;
+  color: #5a5656;
+  display: grid;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  place-items: center;
+
+    }
+	
+/*
+	.btn-round {
+	background: #5a5656;
+	border-radius: 50%;
+	color: #f4f4f4;
+	display: block;
+	font-size: 12px;
+	height: 50px;
+	line-height: 50px;
+	margin: 30px 125px;
+	text-align: center;
+	text-transform: uppercase;
+	width: 50px;
+}
+*/
+
+	img{
+		height: 2.5rem;
+	}
+
+.twitter-before {
+	background: #d34836;
+	border-radius: 6px 0px 0px 6px;
+	color: #f4f4f4;
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+	
+}
+
+
+.twitter {
+	background: red;
+	border: none;
+	border-radius: 0px 6px 6px 0px;
+	color: #f4f4f4;
+	cursor: pointer;
+	height: 50px;
+	text-transform: uppercase;
+	width: 120px;
+}
+	
+	.myedit{
+		background-color: #5a5656;
+		border-radius: 5px 5px 5px 5px;
+	}
+		
+/*
+	}
+	.orbut{
+	display: block;
+	margin-left:40px;
+	
+	}
+*/
+	.gmailbut{
+		display: inline-block;
+	margin-left: 5px;
+	}
+	
+	.fontawesome-twitter ion-icon{
+		margin-top: 13px;
+	}
+	
+	
+	
+	.fb-before {
+	background: #0064ab;
+	border-radius: 6px 0px 0px 6px;
+	color: #f4f4f4;
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	width: 50px;
+	margin-left: 13px;
+	
+}
+	.fb-before:hover {
+		color: black;
+	}
+
+
+.fb {
+	background: #0079ce;
+	border: none;
+	border-radius: 0px 6px 6px 0px;
+	color: #f4f4f4;
+	cursor: pointer;
+	height: 50px;
+	text-transform: uppercase;
+	width: 120px;
+}
+	
+	
+	.fbbut{
+		display: inline-block;
+	margin-right: 5px;
+	}
+	
+	.fontawesome-fb ion-icon{
+		margin-top: 8px;
+	}
+</style>
+
+
+

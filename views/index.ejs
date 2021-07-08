@@ -1,0 +1,369 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid nav-contcnt">
+<!--        <a class="navbar-brand" href="#" style="color: #5F6368;">-->
+<!--			<span style="font-weight: bold;">Z</span> Meet-->
+		<div><img src="/images/Capture.jpg" id="logoteam" style="display:block"></div>
+<!--		</a>-->
+		<div class="a123" style="display: flex;">
+                <a class="btn btn-primary new-meeting"  href="/new-meeting" role="button">New
+                    Meeting</a>
+                <form action="join-room" style="margin-left: .5rem;" method="POST">
+                    <div class="input-group ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">
+                            <ion-icon name="planet-outline"></ion-icon>
+                        </span>
+                        <input name="room_id" type="text" class="form-control" placeholder="Enter a code or Link"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-primary" type="submit" id="button-addon2">Join</button>
+                    </div>
+                </form>
+            </div>
+        <div class="d-flex">
+            <p class="m-0 px-3" style="font-weight: bold; color: #5F6368;">
+                <%= user.name %>
+            </p>
+            <a class="icon" href="/usermanual">
+                <ion-icon name="help-circle-outline"></ion-icon>
+            </a>
+            
+            <a class="icon" href="/logout">
+                <ion-icon name="exit-outline"></ion-icon>
+            </a>
+			<script>
+sessionStorage.setItem("User-name", "<%=user.username %>");	
+		
+		
+</script>
+        </div>
+		
+		
+
+        <style>
+			
+			.a123{
+				position: absolute;
+				left: 7%;
+			}
+			
+						
+            @media (max-width: 440px) {
+                .nav-contcnt {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .new-meeting {
+                    width: 124px;
+                    white-space: nowrap;
+                }
+            }
+
+            .icon {
+                text-decoration: none;
+                color: #5F6368;
+                padding: 0rem .25rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: .25rem;
+                margin: 0rem .35rem;
+            }
+
+            .icon:hover {
+                background-color: rgb(197, 197, 197);
+                color: #5F6368;
+            }
+
+            .icon ion-icon {
+                font-size: 1.7rem;
+            }
+			
+			
+			
+			
+			
+			
+			
+			
+/*
+			body {
+    font-size: 12px;
+    font-family: Comic Sans MS;
+    padding: 50px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+*/
+
+div#main-card {
+/*    max-width: 500px;*/
+/*	height:700px;*/
+/*	display: inline-block;*/
+	
+    box-shadow: -5px 2px 18px 4px #ccc;
+	
+}
+
+.cover-photo {
+    background: #0ab581;
+/*    width: 300px;*/
+    height: 100px;
+}
+
+.photo {
+    background: #f9f9f9;
+/*    width: 300px;*/
+    height: 200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+#profile {
+	
+    position: relative;
+    top: -50px;
+/*    max-width: 100%;*/
+	min-height: 200px;
+	min-width: 200px;
+	height: 200px;
+	width: 200px;
+/*    max-height: 100%;*/
+    border-radius: 50%;
+    box-shadow: -1px 1px 11px 6px rgba(189, 172, 172, 0.33);
+/*	background-image: url("/uploads/60111.jpg");*/
+			}
+	#logoteam{
+		
+	
+/*    max-width: 100%;*/
+	max-height: 50px;
+	max-width: 50px;
+
+/*    max-height: 100%;*/
+/*    border-radius: 50%;*/
+    box-shadow: -1px 1px 11px 6px rgba(189, 172, 172, 0.33);
+/*	background-image: url("/uploads/60111.jpg");*/
+	}
+
+.content {
+    background: #f9f9f9;
+/*    width: 300px;*/
+    height: 100px;
+    position: relative;
+    top: -35px;
+}
+
+.contact {
+    background: #30354d;
+/*    width: 300px;*/
+    height: 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+h2.name,
+h3,
+a {
+/*    margin: 0;*/
+    text-align: center;
+}
+
+h2.name {
+    padding-bottom: 20px;
+}
+
+h3.fullstack {
+    padding-bottom: 10px;
+}
+
+a {
+    color: #0ab581;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+ul {
+    padding: 0;
+}
+
+.fa {
+    font-size: 22px;
+    padding: 10px;
+    text-decoration: none;
+    color: #0ab581;
+}
+
+.fa:hover {
+    color: #000;
+}
+
+a.certified {
+  color: black;
+  cursor: pointer;
+}
+
+a.certified:hover {
+  color: #0ab581;
+}
+
+div#main-card:hover {
+    -webkit-animation-name: pulse;  
+    animation-name: pulse;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+    @-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+    @keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+} 
+
+			
+		
+			
+			
+			
+			
+			
+			
+			
+        </style>
+    </div>
+</nav>
+
+
+		<div id="main-card">
+        <div class="cover-photo"></div>
+        <div class="photo">
+            <a href="/upload/<%=user.username%>" id="profile-pic"><img src="/uploads/<%=user.username%>.jpg" onerror="this.src='/uploads/60111.jpg'" id="profile"/></a>
+        </div>
+        <div class="content">
+            <h2 class="name"><%= user.name %></h2>
+          <h3 class="fullstack"><%= user.username %> <br />Welcome to Happy Meet</h3>
+            <h3 class="email">
+                <a href="mailto:<%= user.email %>"><%= user.email %></a>
+            </h3>
+        </div>
+        <div class="contact">
+            <ul>
+                <a href="https://www.linkedin.com/in/abdeladhim-abbassi-5026b0120/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Adhouma" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+                <a href="https://codepen.io/Adhouma/" target="_blank">
+                    <i class="fa fa-codepen"></i>
+                </a>
+            </ul>
+        </div>
+    </div>
+
+<div class="container py-5" hidden>
+    <div class="row g-3">
+        <div class="col-md-6">
+            <h1 class="mb-3">
+                In this together.
+            </h1>
+            <p style="color: #5F6368;">Build stronger relationships, supercharge collaboration, and create an engaging meeting experience with HD video
+                available for all.</p>
+            <div class="a123 my-5" style="display: flex; ">
+                <a class="btn btn-primary new-meeting" style="width: 180px;" href="/new-meeting" role="button">New
+                    Meeting</a>
+                <form action="join-room" style="margin-left: 1rem;" method="POST">
+                    <div class="input-group ">
+                        <span class="input-group-text" id="inputGroup-sizing-default">
+                            <ion-icon name="planet-outline"></ion-icon>
+                        </span>
+                        <input name="room_id" type="text" class="form-control" placeholder="Enter a code or Link"
+                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-primary" type="submit" id="button-addon2">Join</button>
+                    </div>
+                </form>
+            </div>
+            <hr>
+            <p><a href="#" style="text-decoration: none;">Learn more about</a> meeting </p>
+			
+			
+        </div>
+                
+                
+<!--                    <img src="/images/ss.png" width="100%" class="rounded" alt="">-->
+
+					
+					
+              
+         
+       
+    </div>
+</div>
+<!-- <div class="container py-5" style="display: flex; justify-content: center; align-items: center;">
+    <div class="card" style="width: 25rem;">
+        <div class="card-header">
+            Meeting
+        </div>
+        <div class="card-body">
+            <form action="/join-room" method="POST">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Enter your Room Id</label>
+                    <input required name="room_id" class="form-control" placeholder="Room Id">
+                    <div class="form-text">You have to enter the room id to enter a specific room.
+                    </div>
+                </div>
+                <button style="width: 100%;" type="submit" class="btn btn-primary mb-3">Join</button>
+            </form>
+            <form action="/create-room" method="POST">
+                <button style="width: 100%;" type="submit" class="btn btn-success mb-3">Create room</button>
+            </form>
+            <a style="width: 100%;" type="submit" class="btn btn-danger">Log Out</a>
+        </div>
+    </div>
+</div> -->
+
