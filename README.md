@@ -80,11 +80,12 @@ node server.js
 - Create a meeting.
 - Room Id of your choice.
 - Join a meeting.
-- Pre-Viewing before Joining.
+- Multipe users can interact.
+- Pre-Viewing and chatting before Joining.
 - Invite others via mail.
 - mute audio.
 - stop video.
-- chatting during Meet.
+- chatting.
 - share screen.
 - Record Screen.
 - Minimizing/ maximizing other video.
@@ -104,6 +105,7 @@ For deploy the project I use [heroku](https://heroku.com)
 
 - Mainly targetted to work on browsers running on Desktop and laptops. However, can be used in thge browser of your smartphone or tablets as well.
 - Works the best on browsers like Chrome and Firefox.
+- Best performance is obtained if the numer of users in a meet is less than 5, however this may vary with the device you use and the internet connectivity you are using. 
 
 
 ### Some specific points to remember:
@@ -111,6 +113,9 @@ For deploy the project I use [heroku](https://heroku.com)
 - Recording of audio of the meeting and sharing the audio along with screen sharing is tested only for Google Chrome and might not be available on other browsers.
 - The feature of "picture in picture" is only tested on Mozilla Firefox and might not work on other browsers.
 - You are allowed to have a RoomId of your choice, however letting a Id getting created automatically is more seecured due to its random nature making it unique.
+- The downloaded video format of the recording may not be supported by some media players including windows media player, so it is prescribed to use VLC media player to view the recorded video.
+- If you want to use the same room for any purpose again including the monitoring of the chat history, do have the roomId/link to the room stored with you.
+- The invite link for a meet may also be delivered to the spam section of the mail of the person recieving the invite.
 
 
 ### The web app has been tested on:
@@ -118,7 +123,7 @@ For deploy the project I use [heroku](https://heroku.com)
 - Samsung Galaxy J7 Prime (Android- Chrome)
 - Acer Predator Helious 300 (Windows 10- Chrome, Firefox, Edge)
 - Realme 2 pro (Android- Chrome)
-- Acer Predator Helious 300 (Ubuntu- Chrome)
+- Acer Predator Helious 300 (Ubuntu- Firefox)
 
 
 

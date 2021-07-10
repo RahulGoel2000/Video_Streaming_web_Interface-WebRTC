@@ -110,7 +110,7 @@
 		
 		<br>
 		<div id="mail-input-container">
-		<form method="post" class="mailform"><input type="text" class="mail-input" id="mail-input" placeholder="Enter email" style="height=20%"><input type="button" value="Send Email" onclick="sendEmail()" class="buttonformail"/></form>
+		<form method="post" class="mailform"><input type="text" class="mail-input" id="mail-input" placeholder="Enter emails (email1,email2,....)" style="height=20%"><input type="button" value="Send Email" onclick="sendEmail()" class="buttonformail"/></form>
 		</div>
 		
 		
@@ -263,6 +263,7 @@ function sendEmail(){
 //message => alert(message)
 //);
 //	
+	
 	var EmailPanel = document.getElementById('mail-input');
 	
 	
@@ -273,7 +274,9 @@ function sendEmail(){
     Subject : "This is the subject",
     Body : window.location.href,
 }).then(
+		
   message => alert("mail has been sent sucessfully to "+EmailPanel.value)
+	
 );}
 //}
 //	function mail(){
